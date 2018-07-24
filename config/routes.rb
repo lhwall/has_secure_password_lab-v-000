@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 get "users/home"
-get "users/signup"
+get "users/login"
 post "/login" => "sessions#create"
 get "sessions/new"
 
