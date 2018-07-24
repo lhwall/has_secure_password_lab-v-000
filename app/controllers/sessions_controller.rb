@@ -9,5 +9,5 @@ session[:user_id] = User.find_by(name: params[:name]).id
 redirect_to controller: 'users', action: 'home'
   end
 
-  
+
 end
