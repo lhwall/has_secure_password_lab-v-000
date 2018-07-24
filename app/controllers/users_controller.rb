@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to action: "home"
     else
-       redirect_to action: "login"
+       redirect_to action: "new"
     end
   end
 
