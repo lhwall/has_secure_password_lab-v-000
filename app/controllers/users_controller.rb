@@ -12,11 +12,16 @@ class UsersController < ApplicationController
 
   def create
     if params[:user][:password] == params[:user][:password_confirmation]
-      @user = User.create(params[:user])
+      @user = User.create(user_params)
       redirect_to action: "home"
     else
        redirect_to action: "login"
     end
   end
 
+  private 
+  def user_params
+      params.require(:user).permit(:username, :password, :password_confirmation)
+    end
+    
 end
