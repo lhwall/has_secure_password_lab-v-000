@@ -4,7 +4,8 @@ get "users/home"
 get "users/login"
 post "/login" => "sessions#create"
 get "sessions/new"
-
+get "users/new"
+post "/new_user" => "users#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
