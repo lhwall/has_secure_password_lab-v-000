@@ -4,5 +4,7 @@ class UsersController < ApplicationController
     @username = @User.find(session[:id]).name
   end
 
+  def login
+  end
 
 end
